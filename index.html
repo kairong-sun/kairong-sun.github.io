@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kairong Sun, Ph.D. | Horticulture and Quantitative Phenotyping</title>
+  <meta name="description" content="Academic homepage of Kairong Sun (孙凯荣), Ph.D. in Horticulture. Research in floral development, peel coloration, CIELAB colour measurement, and quantitative phenotyping." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+              800: '#065f46',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .glass-nav {
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    @media print {
+      .no-print { display: none !important; }
+      body { background: white !important; color: black !important; font-size: 11pt; }
+      a { text-decoration: none !important; color: black !important; }
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 font-sans antialiased selection:bg-emerald-500 selection:text-white">
+
+  <!-- Top Navigation Bar -->
+  <header class="sticky top-0 z-50 glass-nav bg-white/80 dark:bg-slate-950/80 border-b border-slate-200/80 dark:border-slate-800/80 no-print">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-400 flex items-center justify-center text-white font-bold text-sm shadow-md shadow-emerald-500/20 group-hover:scale-105 transition-transform">
+          KS
+        </div>
+        <div class="flex flex-col">
+          <span class="font-bold text-base tracking-tight text-slate-900 dark:text-white leading-tight">Kairong Sun</span>
+          <span class="text-xs text-slate-500 dark:text-slate-400 font-mono">孙凯荣 · Ph.D.</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links (References removed) -->
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600 dark:text-slate-300">
+        <a href="#about" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Profile</a>
+        <a href="#highlights" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Contributions</a>
+        <a href="#publications" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Publications</a>
+        <a href="#skills" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Skills & Toolstack</a>
+        <a href="#education" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Education</a>
+      </nav>
+
+      <!-- Action Utilities -->
+      <div class="flex items-center gap-3">
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" aria-label="Toggle Theme" class="p-2.5 rounded-lg border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-900 hover:bg-slate-200 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition-all">
+          <i id="theme-icon-light" class="fa-regular fa-sun hidden"></i>
+          <i id="theme-icon-dark" class="fa-regular fa-moon"></i>
+        </button>
+
+        <!-- Download CV Button -->
+        <a href="Kairong_Sun_CV.docx" download="Kairong_Sun_CV.docx" title="Download CV" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all shadow-sm">
+          <i class="fa-regular fa-file-lines text-emerald-600 dark:text-emerald-400"></i>
+          <span>Download CV</span>
+        </a>
+
+        <!-- Contact CTA Button -->
+        <a href="mailto:skr@cau.edu.cn" class="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-semibold rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white shadow-sm shadow-emerald-600/30 transition-all hover:shadow-emerald-600/50">
+          <i class="fa-regular fa-envelope"></i>
+          <span class="hidden sm:inline">Contact</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-16">
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative pt-6 pb-4">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Left: Bio & Overview -->
+        <div class="lg:col-span-8 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-950/70 dark:text-emerald-300 border border-emerald-300/40 dark:border-emerald-800/60">
+            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+            Ph.D. in Horticulture, 2026
+          </div>
+
+          <div class="space-y-2">
+            <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
+              Kairong Sun <span class="text-emerald-600 dark:text-emerald-400 font-medium text-2xl sm:text-3xl">(孙凯荣)</span>
+            </h1>
+            <p class="text-lg sm:text-xl font-medium text-slate-600 dark:text-slate-300 leading-relaxed">
+              Early-Career Researcher in Horticulture and Quantitative Phenotyping
+            </p>
+          </div>
+
+          <p class="text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
+            Ph.D. in Pomology from <strong class="text-slate-900 dark:text-white font-semibold">China Agricultural University</strong> (2026). My research focuses on <strong class="text-slate-900 dark:text-white font-semibold">fruit biology, developmental imaging, and instrument-based CIELAB colour measurement</strong>, with an active interest in extending this foundation toward <span class="text-emerald-600 dark:text-emerald-400 font-semibold">image-based assessment and data-informed analysis</span> of horticultural and postharvest traits.
+          </p>
+
+          <!-- Social & Contact Links -->
+          <div class="flex flex-wrap items-center gap-3 pt-2">
+            <a href="https://scholar.google.com.hk/citations?user=fKrkHpMAAAAJ&hl" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-medium rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-200 hover:border-emerald-500 hover:text-emerald-600 transition-all shadow-sm">
+              <i class="fa-brands fa-google-scholar text-blue-500"></i> Google Scholar
+            </a>
+            <a href="https://orcid.org/0009-0003-7904-2536" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-medium rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-200 hover:border-emerald-500 hover:text-emerald-600 transition-all shadow-sm">
+              <i class="fa-brands fa-orcid text-emerald-500"></i> ORCID: 0009-0003-7904-2536
+            </a>
+            <a href="https://www.researchgate.net/profile/Kairong-Sun" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-medium rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-200 hover:border-emerald-500 hover:text-emerald-600 transition-all shadow-sm">
+              <i class="fa-brands fa-researchgate text-teal-600"></i> ResearchGate
+            </a>
+            <button onclick="copyEmail()" class="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-medium rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-200 hover:border-emerald-500 hover:text-emerald-600 transition-all shadow-sm">
+              <i class="fa-regular fa-copy text-slate-400"></i> <span id="copy-text">skr@cau.edu.cn</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Profile Card with Glowing Emerald Border & Hover Interaction -->
+        <div class="lg:col-span-4 flex justify-center">
+          <div class="w-full max-w-sm rounded-2xl bg-gradient-to-b from-emerald-500/20 via-teal-500/10 to-transparent p-1 border border-emerald-500/30 dark:border-emerald-500/20 shadow-xl hover:shadow-emerald-500/10 transition-shadow">
+            <div class="bg-white dark:bg-slate-900 rounded-[14px] p-6 space-y-5">
+              
+              <!-- Avatar with green border & hover micro-zoom (Enlarged) -->
+              <div class="relative mx-auto w-44 h-44 sm:w-48 sm:h-48 rounded-2xl border-2 border-emerald-500/40 dark:border-emerald-500/30 overflow-hidden shadow-lg group">
+                <img src="profile.png" alt="Kairong Sun" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+              </div>
+
+              <!-- Quick Info List -->
+              <div class="space-y-2.5 text-xs text-slate-600 dark:text-slate-300 border-t border-slate-100 dark:border-slate-800 pt-4">
+                <div class="flex items-center justify-between">
+                  <span class="text-slate-400"><i class="fa-solid fa-location-dot w-4"></i> Location:</span>
+                  <span class="font-medium text-slate-800 dark:text-slate-200">Beijing, China</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-slate-400"><i class="fa-solid fa-graduation-cap w-4"></i> Education:</span>
+                  <span class="font-medium text-slate-800 dark:text-slate-200">Ph.D., CAU (2026)</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-slate-400"><i class="fa-solid fa-medal w-4"></i> Distinction:</span>
+                  <span class="font-medium text-slate-800 dark:text-slate-200">National Scholarship</span>
+                </div>
+
+              </div>
+
+              <!-- Contact Action -->
+              <a href="mailto:skr@cau.edu.cn" class="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 dark:bg-emerald-600 dark:hover:bg-emerald-500 text-white text-xs font-semibold shadow-md hover:shadow-lg transition-all">
+                <i class="fa-regular fa-envelope"></i> Contact Me
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: RESEARCH PROFILE -->
+    <section id="about" class="space-y-6 scroll-mt-20">
+      <div class="border-l-4 border-emerald-500 pl-4">
+        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Research Profile</h2>
+        <p class="text-sm text-slate-500 dark:text-slate-400">Biological traits, quantitative imaging, and colour measurement</p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 shadow-sm leading-relaxed text-slate-600 dark:text-slate-300 space-y-4 text-base sm:text-lg">
+        <p>
+          My academic training spans pomology, ornamental horticulture, and turfgrass science at <strong class="text-slate-900 dark:text-white font-semibold">China Agricultural University, the Chinese Academy of Agricultural Sciences, and Hainan University</strong>.
+        </p>
+        <p>
+          My research has focused on <strong class="text-slate-900 dark:text-white font-semibold">fig floral development and peel coloration</strong>, as well as tree-peony flowering under controlled conditions. I have used <span class="text-emerald-600 dark:text-emerald-400 font-semibold">microscopy, ImageJ/Fiji, histology, and colour spectrophotometry</span> to quantify biological traits across cellular and organ levels. I am interested in extending this experience toward <span class="text-emerald-600 dark:text-emerald-400 font-semibold">image-based assessment and data-informed analysis</span> of horticultural and postharvest traits.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION: SELECTED CONTRIBUTIONS (With Green Hover Border & Heading Interaction) -->
+    <section id="highlights" class="space-y-6 scroll-mt-20">
+      <div class="border-l-4 border-emerald-500 pl-4">
+        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Selected Research Contributions</h2>
+        <p class="text-sm text-slate-500 dark:text-slate-400">Key outcomes at organ, tissue, cellular, and computational scales</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <!-- Highlight Card 1: Fig Colour -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 shadow-sm hover:border-emerald-500/60 dark:hover:border-emerald-500/60 hover:shadow-md transition-all space-y-3 group">
+          <div class="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-950/70 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-lg">
+            <i class="fa-solid fa-palette"></i>
+          </div>
+          <h3 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+            Instrument-Based Colour Phenotyping & CIELAB
+          </h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+            Investigated fig peel-colour development in a first-author study (<em class="font-semibold">Hortic. Plant J.</em>, 2026), using a colour spectrophotometer and <strong class="text-slate-800 dark:text-slate-200 font-semibold">CIELAB parameters (L*, a*, and b*)</strong> to quantitatively track colour changes and relate them to DNA-methylation and gene-expression patterns.
+          </p>
+        </div>
+
+        <!-- Highlight Card 2: Multi-Scale Imaging -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 shadow-sm hover:border-emerald-500/60 dark:hover:border-emerald-500/60 hover:shadow-md transition-all space-y-3 group">
+          <div class="w-10 h-10 rounded-xl bg-teal-100 dark:bg-teal-950/70 text-teal-600 dark:text-teal-400 flex items-center justify-center font-bold text-lg">
+            <i class="fa-solid fa-microscope"></i>
+          </div>
+          <h3 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+            Multi-Scale Morphometrics & Biological Imaging
+          </h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+            Quantified sex-specific floral development in fig at organ, tissue, and cellular scales using developmental photography, stereomicroscopy, histology, and <strong class="text-slate-800 dark:text-slate-200 font-semibold">scale-calibrated image morphometry in ImageJ/Fiji</strong>, establishing high-resolution cytological datasets.
+          </p>
+        </div>
+
+        <!-- Highlight Card 3: Tree Peony Forcing (1st Author) -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 shadow-sm hover:border-emerald-500/60 dark:hover:border-emerald-500/60 hover:shadow-md transition-all space-y-3 group">
+          <div class="w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-950/70 text-blue-600 dark:text-blue-400 flex items-center justify-center font-bold text-lg">
+            <i class="fa-solid fa-seedling"></i>
+          </div>
+          <h3 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+            Controlled Tree-Peony Forcing & Flower Phenotyping
+          </h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+            Conducted controlled forcing experiments and systematically quantified flowering performance, including flowering rate, floral deformity, and <strong class="text-slate-800 dark:text-slate-200 font-semibold">CIELAB petal-colour traits</strong>, contributing to a first-author publication on DNA demethylation-induced flowering (<em class="font-semibold">Int. J. Mol. Sci.</em>, 2022).
+          </p>
+        </div>
+
+        <!-- Highlight Card 4: AI-Assisted Scripting -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 shadow-sm hover:border-emerald-500/60 dark:hover:border-emerald-500/60 hover:shadow-md transition-all space-y-3 group">
+          <div class="w-10 h-10 rounded-xl bg-indigo-100 dark:bg-indigo-950/70 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold text-lg">
+            <i class="fa-solid fa-code"></i>
+          </div>
+          <h3 class="font-bold text-lg text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+            AI-Assisted Scripting & Candidate Gene Mapping
+          </h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+            Integrated outputs from differential-expression analysis, WGCNA, phenotypic associations, and DAP-seq to prioritize FcAGM1 as a candidate regulator; applied <strong class="text-slate-800 dark:text-slate-200 font-semibold">AI-assisted scripting</strong> to perform downstream genomic coordinate analysis and visualization of candidate genes.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: PUBLICATIONS -->
+    <section id="publications" class="space-y-6 scroll-mt-20">
+      <div class="border-l-4 border-emerald-500 pl-4">
+        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Publications & Intellectual Property</h2>
+        <p class="text-sm text-slate-500 dark:text-slate-400">Peer-reviewed journal articles and invention patent</p>
+      </div>
+
+      <!-- First-Author Papers -->
+      <div class="space-y-4">
+        <h3 class="text-sm font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 flex items-center gap-2">
+          <i class="fa-solid fa-pen-nib"></i> First-Author Papers
+        </h3>
+
+        <!-- Paper 1 -->
+        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-3">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950/70 dark:text-emerald-300 border border-emerald-300/40">
+              Horticultural Plant Journal (2026)
+            </span>
+            <a href="https://doi.org/10.1016/j.hpj.2024.04.002" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-emerald-600 dark:text-emerald-400 hover:underline inline-flex items-center gap-1">
+              <span>doi:10.1016/j.hpj.2024.04.002</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+          <h4 class="text-base font-bold text-slate-900 dark:text-white">
+            FcMET1 mediates low DNA methylation and promotes peel coloring in <em>Ficus carica</em>
+          </h4>
+          <p class="text-xs text-slate-600 dark:text-slate-400">
+            <strong class="text-slate-900 dark:text-white">Sun, K.</strong>, Wang, X., Huang, H., Wang, Y., Fan, Z., Xia, Y., Ma, H., & Song, M. (2026). <em>Horticultural Plant Journal</em>, 12(2), 345–355.
+          </p>
+          <div class="flex flex-wrap gap-1.5 pt-1">
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-[11px] font-mono text-slate-600 dark:text-slate-400">CIELAB Colour Parameters</span>
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-[11px] font-mono text-slate-600 dark:text-slate-400">Peel Pigmentation</span>
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-[11px] font-mono text-slate-600 dark:text-slate-400">Spectrophotometry</span>
+          </div>
+        </div>
+
+        <!-- Paper 2 -->
+        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-3">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950/70 dark:text-emerald-300 border border-emerald-300/40">
+              International Journal of Molecular Sciences (2022)
+            </span>
+            <a href="https://doi.org/10.3390/ijms23126632" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-emerald-600 dark:text-emerald-400 hover:underline inline-flex items-center gap-1">
+              <span>doi:10.3390/ijms23126632</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+          <h4 class="text-base font-bold text-slate-900 dark:text-white">
+            DNA demethylation induces tree peony flowering with a low deformity rate compared to gibberellin by inducing <em>PsFT</em> expression under forcing culture conditions
+          </h4>
+          <p class="text-xs text-slate-600 dark:text-slate-400">
+            <strong class="text-slate-900 dark:text-white">Sun, K.</strong>, Xue, Y., Prijic, Z., Wang, S., Markovic, T., Tian, C., Wang, Y., Xue, J., & Zhang, X. (2022). <em>IJMS</em>, 23(12), 6632.
+          </p>
+          <div class="flex flex-wrap gap-1.5 pt-1">
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-[11px] font-mono text-slate-600 dark:text-slate-400">Controlled Forcing Culture</span>
+            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-[11px] font-mono text-slate-600 dark:text-slate-400">Flower Deformity Scoring</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Co-Authored Papers -->
+      <div class="space-y-4 pt-2">
+        <h3 class="text-sm font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 flex items-center gap-2">
+          <i class="fa-solid fa-users"></i> Co-Authored Papers
+        </h3>
+
+        <!-- Co-author 1 -->
+        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-2">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-200">
+              Plant Biotechnology Journal (2025)
+            </span>
+            <a href="https://doi.org/10.1111/pbi.70085" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-emerald-600 dark:text-emerald-400 hover:underline inline-flex items-center gap-1">
+              <span>doi:10.1111/pbi.70085</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+          <h4 class="text-sm font-bold text-slate-900 dark:text-white">
+            ERF100 regulated by ERF28 and NOR controls pectate lyase 7, modulating fig (<em>Ficus carica</em> L.) fruit softening
+          </h4>
+          <p class="text-xs text-slate-600 dark:text-slate-400">
+            Fan, Z., Wang, Y., Zhai, Y., Gu, X., <strong class="text-slate-800 dark:text-slate-200">Sun, K.</strong>, Zhao, D., Wang, J., Sun, P., Huang, H., He, J., Wang, Y., Flaishman, M. A., & Ma, H. (2025).
+          </p>
+        </div>
+
+        <!-- Co-author 2 -->
+        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-2">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-200">
+              Horticultural Plant Journal (2026)
+            </span>
+            <a href="https://doi.org/10.1016/j.hpj.2024.11.006" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-emerald-600 dark:text-emerald-400 hover:underline inline-flex items-center gap-1">
+              <span>doi:10.1016/j.hpj.2024.11.006</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+          <h4 class="text-sm font-bold text-slate-900 dark:text-white">
+            Efficient regeneration and genetic transformation of fig (<em>Ficus carica</em>) from stem thin cell layer explants
+          </h4>
+          <p class="text-xs text-slate-600 dark:text-slate-400">
+            Gu, X., He, J., He, H., Wang, Y., Fan, Z., Zhao, D., <strong class="text-slate-800 dark:text-slate-200">Sun, K.</strong>, Zheng, C., & Ma, H. (2026).
+          </p>
+        </div>
+
+        <!-- Co-author 3 -->
+        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-2">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-200">
+              RSC Advances (2024)
+            </span>
+            <a href="https://doi.org/10.1039/D3RA08144C" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-emerald-600 dark:text-emerald-400 hover:underline inline-flex items-center gap-1">
+              <span>doi:10.1039/D3RA08144C</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+          <h4 class="text-sm font-bold text-slate-900 dark:text-white">
+            Physicochemical, antibacterial and aromatic qualities of herbaceous peony (<em>Paeonia lactiflora</em> Pall.) tea with different varieties
+          </h4>
+          <p class="text-xs text-slate-600 dark:text-slate-400">
+            Wang, X., <strong class="text-slate-800 dark:text-slate-200">Sun, K.</strong>, Liao, X., Zhang, Y., Ban, Y., Zhang, X., & Song, Z. (2024).
+          </p>
+        </div>
+      </div>
+
+      <!-- Patents & Manuscripts -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+        <div class="p-4 rounded-xl bg-slate-100/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 text-xs space-y-1">
+          <span class="font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider text-[11px]"><i class="fa-solid fa-certificate text-emerald-600 dark:text-emerald-400"></i> Invention Patent</span>
+          <p class="font-semibold text-slate-900 dark:text-white">A Method for Obtaining Fig Seeds through Artificial Pollination</p>
+          <p class="text-slate-500">Chinese Patent Application No.: 202610223408.8 · Huiqin Ma, Kairong Sun, et al.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-100/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 text-xs space-y-1">
+          <span class="font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider text-[11px]"><i class="fa-solid fa-file-lines text-teal-600 dark:text-teal-400"></i> Manuscript in Preparation</span>
+          <p class="font-semibold text-slate-900 dark:text-white">Molecular regulatory mechanism of FcAGM1 in determining unisexual flower development and style elongation in fig</p>
+          <p class="text-slate-500">Based on doctoral dissertation research (China Agricultural University).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: TECHNICAL SKILLS & TOOLSTACK (Restored 4-Color Category Design) -->
+    <section id="skills" class="space-y-6 scroll-mt-20">
+      <div class="border-l-4 border-emerald-500 pl-4">
+        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Technical Skills & Toolstack</h2>
+        <p class="text-sm text-slate-500 dark:text-slate-400">Interdisciplinary competencies combining computation, imaging, and bio-systems</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- 1. Computational Biology & AI-Assisted Workflows (Emerald) -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-4">
+          <div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-bold text-base">
+            <i class="fa-solid fa-terminal"></i>
+            <span>Computational Biology & AI-Assisted Workflows</span>
+          </div>
+          <ul class="space-y-2.5 text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i>
+              <span><strong>Basic Python & AI-Assisted Scripting:</strong> Used AI coding assistants to adapt and debug task-specific scripts for biological data processing and genomic-coordinate visualization.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i>
+              <span><strong>Omics Analysis:</strong> Downstream analysis of processed datasets, including differential-expression analysis, GO/KEGG enrichment, WGCNA modules, and DAP-seq peak/motif interpretation.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i>
+              <span><strong>Bioinformatics & Statistics:</strong> TBtools, MEGA, iTOL, PlantCARE, IBM SPSS Statistics; Student’s t-tests, one-way ANOVA, and post hoc multiple comparisons.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i>
+              <span><strong>Computing Environment:</strong> Basic Linux command-line operations, SSH-based remote connections, and VPS-based workflows.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 2. Imaging & Quantitative Phenotyping (Teal) -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-4">
+          <div class="flex items-center gap-2 text-teal-600 dark:text-teal-400 font-bold text-base">
+            <i class="fa-solid fa-camera-retro"></i>
+            <span>Imaging & Quantitative Phenotyping</span>
+          </div>
+          <ul class="space-y-2.5 text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-check text-teal-500 mt-0.5"></i>
+              <span><strong>Image Analysis (ImageJ / Fiji):</strong> Quantitative measurement of morphometric traits, cellular dimensions, cell counting, and stomatal/pollen characteristics.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-check text-teal-500 mt-0.5"></i>
+              <span><strong>Instrument-Based Colour Phenotyping:</strong> Spectrophotometer CIELAB colour space (L*, a*, b*) for fruit peel and floral evaluation.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-check text-teal-500 mt-0.5"></i>
+              <span><strong>Microscopy & Histology:</strong> Stereomicroscopy, confocal laser scanning microscopy (CLSM), paraffin histology, and fluorescence/DAPI imaging.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-check text-teal-500 mt-0.5"></i>
+              <span><strong>Molecular Visualization:</strong> AI-assisted protein structure prediction using AlphaFold 3 and 3D visualization in PyMOL.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 3. Horticultural Systems (Blue & Seedling Icon Restored) -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-4">
+          <div class="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-bold text-base">
+            <i class="fa-solid fa-seedling"></i>
+            <span>Horticultural Systems</span>
+          </div>
+          <ul class="space-y-2.5 text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-check text-blue-500 mt-0.5"></i>
+              <span><strong>Orchard & Forcing Management:</strong> Fig and grape orchard management; controlled-environment forcing of tree peony and herbaceous peony; plant propagation and germplasm evaluation.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-check text-blue-500 mt-0.5"></i>
+              <span><strong>Pollination Biology:</strong> Artificial pollination, pollen viability assessment, cryopreservation, fig-pollinating-wasp rearing (<em>Blastophaga psenes</em>), and field trials.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 4. Molecular & Functional Validation (Indigo & DNA Icon Restored) -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-4">
+          <div class="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-bold text-base">
+            <i class="fa-solid fa-dna"></i>
+            <span>Molecular & Functional Validation</span>
+          </div>
+          <ul class="space-y-2.5 text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-check text-indigo-500 mt-0.5"></i>
+              <span><strong>Assays:</strong> Dual-LUC, EMSA, Y1H/Y2H, luciferase complementation imaging (LCI), and Western blotting.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-check text-indigo-500 mt-0.5"></i>
+              <span><strong>Gene Expression & Epigenetics:</strong> Molecular cloning, vector construction, qRT-PCR, transient expression in fruit and <em>N. benthamiana</em>; McrBC-PCR and bisulfite assays.</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: EDUCATION -->
+    <section id="education" class="space-y-6 scroll-mt-20">
+      <div class="border-l-4 border-emerald-500 pl-4">
+        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Education</h2>
+        <p class="text-sm text-slate-500 dark:text-slate-400">Academic training in pomology, ornamental horticulture, and turfgrass science</p>
+      </div>
+
+      <div class="relative border-l-2 border-slate-200 dark:border-slate-800 ml-4 space-y-8 pl-6">
+        
+        <!-- Ph.D. -->
+        <div class="relative group">
+          <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-emerald-500 border-4 border-white dark:border-slate-950"></div>
+          <div class="space-y-1">
+            <div class="flex flex-wrap items-center justify-between">
+              <h3 class="text-base font-bold text-slate-900 dark:text-white">Ph.D. in Horticulture (Pomology)</h3>
+              <span class="text-xs font-mono text-emerald-600 dark:text-emerald-400 font-semibold">Sep. 2022 – Jul. 2026</span>
+            </div>
+            <p class="text-sm font-medium text-slate-700 dark:text-slate-300">China Agricultural University (中国农业大学), Beijing, China</p>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Advisor: Prof. Huiqin Ma (马会勤 教授)</p>
+            <p class="text-xs text-slate-600 dark:text-slate-300 italic pt-1">
+              Dissertation: <em>FcAGM1 Regulates Sex-Specific Floral Development in Fig (Ficus carica L.)</em>
+            </p>
+          </div>
+        </div>
+
+        <!-- M.S. -->
+        <div class="relative group">
+          <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-300 dark:bg-slate-700 border-4 border-white dark:border-slate-950"></div>
+          <div class="space-y-1">
+            <div class="flex flex-wrap items-center justify-between">
+              <h3 class="text-base font-bold text-slate-900 dark:text-white">M.S. in Horticulture (Ornamental Horticulture)</h3>
+              <span class="text-xs font-mono text-slate-500">Sep. 2019 – Jun. 2022</span>
+            </div>
+            <p class="text-sm font-medium text-slate-700 dark:text-slate-300">Chinese Academy of Agricultural Sciences (中国农科院蔬菜花卉所), Beijing, China</p>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Advisor: Prof. Jingqi Xue (薛璟祺 研究员)</p>
+            <p class="text-xs text-slate-600 dark:text-slate-300 italic pt-1">
+              Thesis: <em>Mechanisms Underlying DNA Demethylation-Induced Winter Flowering in Tree Peony</em>
+            </p>
+          </div>
+        </div>
+
+        <!-- B.S. -->
+        <div class="relative group">
+          <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-300 dark:bg-slate-700 border-4 border-white dark:border-slate-950"></div>
+          <div class="space-y-1">
+            <div class="flex flex-wrap items-center justify-between">
+              <h3 class="text-base font-bold text-slate-900 dark:text-white">B.S. in Horticulture (Turfgrass Science)</h3>
+              <span class="text-xs font-mono text-slate-500">Sep. 2015 – Jun. 2019</span>
+            </div>
+            <p class="text-sm font-medium text-slate-700 dark:text-slate-300">Hainan University (海南大学热带农林学院), Haikou, China</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: HONORS, COURSEWORK & INTERNATIONAL VISITS -->
+    <section class="space-y-6">
+      <div class="border-l-4 border-emerald-500 pl-4">
+        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Honors, Courses & International Visits</h2>
+        <p class="text-sm text-slate-500 dark:text-slate-400">Academic recognition, specialized quantitative coursework, and international visits</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Awards -->
+        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider flex items-center gap-2">
+            <i class="fa-solid fa-trophy"></i> Honors & Awards
+          </h3>
+          <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-300">
+            <li class="font-medium text-slate-900 dark:text-white">• National Scholarship for Doctoral Students (2024)</li>
+            <li>• Merit Student Award, China Agricultural University (2024)</li>
+            <li>• Australian Treasury Wine Estates Penfolds Scholarship (2025)</li>
+            <li>• Hong Kong Jiaduobao Rural Revitalization Talent Scholarship (2026)</li>
+            <li class="pt-1 text-[11px] text-slate-500">• Media Feature: Interviewed by <em>Food & Wine Magazine</em> (China Edition) regarding fig floral ecology & breeding (2025)</li>
+          </ul>
+        </div>
+
+        <!-- Coursework -->
+        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider flex items-center gap-2">
+            <i class="fa-solid fa-graduation-cap"></i> Quantitative Courses
+          </h3>
+          <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-300 font-mono">
+            <li class="flex justify-between">
+              <span>Agri-Big Data with Python:</span>
+              <span class="font-bold text-emerald-600 dark:text-emerald-400">92.5 / 100</span>
+            </li>
+            <li class="flex justify-between">
+              <span>Geographic Info Sys (GIS):</span>
+              <span class="font-bold text-emerald-600 dark:text-emerald-400">94.0 / 100</span>
+            </li>
+            <li class="flex justify-between">
+              <span>Spatial ArcGIS Modeling:</span>
+              <span class="font-bold text-emerald-600 dark:text-emerald-400">90.0 / 100</span>
+            </li>
+            <li class="flex justify-between">
+              <span>Multimedia/Virtual Ag:</span>
+              <span class="font-bold text-emerald-600 dark:text-emerald-400">96.0 / 100</span>
+            </li>
+            <li class="flex justify-between pt-1 border-t border-slate-100 dark:border-slate-800 text-[11px] text-slate-500">
+              <span>Computer Network Rank:</span>
+              <span>Level 3 (2017)</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- International Visits -->
+        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-teal-600 dark:text-teal-400 uppercase tracking-wider flex items-center gap-2">
+            <i class="fa-solid fa-earth-americas"></i> International Visits
+          </h3>
+          <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-300">
+            <li><strong>Portugal (2026):</strong> Observed local horticultural practices and Ficus growing environments in Lisbon and Madeira.</li>
+            <li><strong>Turkey (2025):</strong> Visited Bursa Uludağ University and discussed fig research and germplasm evaluation.</li>
+            <li><strong>Spain (2024):</strong> Observed Mediterranean fig cultivars and orchard management practices.</li>
+            <li><strong>Cambodia (2023):</strong> Observed wild Ficus species and fig–wasp interactions in tropical habitats.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer (Academic References removed) -->
+  <footer class="mt-20 border-t border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-950/50 py-10 no-print">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
+      <div>
+        © 2026 Kairong Sun (孙凯荣). Hosted on GitHub Pages.
+      </div>
+      <div>
+        <a href="#hero" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification for Email Copy -->
+  <div id="toast" class="fixed bottom-6 right-6 px-4 py-2.5 rounded-xl bg-slate-900 text-white text-xs font-medium shadow-2xl transition-all duration-300 opacity-0 translate-y-4 pointer-events-none z-50 flex items-center gap-2">
+    <i class="fa-solid fa-circle-check text-emerald-400"></i>
+    <span>Email copied to clipboard!</span>
+  </div>
+
+  <!-- Theme Toggle & Utilities Script -->
+  <script>
+    // Theme Management
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeIconLight = document.getElementById('theme-icon-light');
+    const themeIconDark = document.getElementById('theme-icon-dark');
+
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+      themeIconLight.classList.remove('hidden');
+      themeIconDark.classList.add('hidden');
+    } else {
+      document.documentElement.classList.remove('dark');
+      themeIconLight.classList.add('hidden');
+      themeIconDark.classList.remove('hidden');
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+      if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+        localStorage.theme = 'light';
+        themeIconLight.classList.add('hidden');
+        themeIconDark.classList.remove('hidden');
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.theme = 'dark';
+        themeIconLight.classList.remove('hidden');
+        themeIconDark.classList.add('hidden');
+      }
+    });
+
+    // Copy Email to Clipboard
+    function copyEmail() {
+      const email = 'skr@cau.edu.cn';
+      navigator.clipboard.writeText(email).then(() => {
+        const toast = document.getElementById('toast');
+        toast.classList.remove('opacity-0', 'translate-y-4');
+        toast.classList.add('opacity-100', 'translate-y-0');
+        setTimeout(() => {
+          toast.classList.remove('opacity-100', 'translate-y-0');
+          toast.classList.add('opacity-0', 'translate-y-4');
+        }, 2200);
+      });
+    }
+  </script>
+
+</body>
+</html>
