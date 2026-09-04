@@ -150,7 +150,10 @@
               
               <!-- Avatar with green border & hover micro-zoom (Enlarged) -->
               <div class="relative mx-auto w-44 h-44 sm:w-48 sm:h-48 rounded-2xl border-2 border-emerald-500/40 dark:border-emerald-500/30 overflow-hidden shadow-lg group">
-                <img src="profile.png" alt="Kairong Sun" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+                <picture>
+                  <source srcset="profile.webp" type="image/webp">
+                  <img src="profile.jpg" alt="Kairong Sun" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" loading="eager" decoding="async">
+                </picture>
               </div>
 
               <!-- Quick Info List -->
