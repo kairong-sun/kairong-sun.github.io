@@ -68,7 +68,7 @@
         </div>
       </a>
 
-      <!-- Desktop Navigation Links (References removed) -->
+      <!-- Desktop Navigation Links -->
       <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600 dark:text-slate-300">
         <a href="#about" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Profile</a>
         <a href="#highlights" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Contributions</a>
@@ -78,17 +78,17 @@
       </nav>
 
       <!-- Action Utilities -->
-      <div class="flex items-center gap-3">
+      <div class="flex items-center gap-2.5">
         <!-- Theme Toggle -->
         <button id="theme-toggle" aria-label="Toggle Theme" class="p-2.5 rounded-lg border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-900 hover:bg-slate-200 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition-all">
           <i id="theme-icon-light" class="fa-regular fa-sun hidden"></i>
           <i id="theme-icon-dark" class="fa-regular fa-moon"></i>
         </button>
 
-        <!-- Download CV Button -->
-        <a href="Kairong_Sun_CV.docx" download="Kairong_Sun_CV.docx" title="Download CV" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all shadow-sm">
-          <i class="fa-regular fa-file-lines text-emerald-600 dark:text-emerald-400"></i>
-          <span>Download CV</span>
+        <!-- CV (PDF) Button in Navbar -->
+        <a href="Kairong_Sun_CV.pdf" target="_blank" title="View / Download Curriculum Vitae (PDF)" class="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all shadow-sm">
+          <i class="fa-solid fa-file-pdf text-rose-500"></i>
+          <span>CV (PDF)</span>
         </a>
 
         <!-- Contact CTA Button -->
@@ -126,8 +126,8 @@
             Ph.D. in Pomology from <strong class="text-slate-900 dark:text-white font-semibold">China Agricultural University</strong> (2026). My research focuses on <strong class="text-slate-900 dark:text-white font-semibold">fruit biology, developmental imaging, and instrument-based CIELAB colour measurement</strong>, with an active interest in extending this foundation toward <span class="text-emerald-600 dark:text-emerald-400 font-semibold">image-based assessment and data-informed analysis</span> of horticultural and postharvest traits.
           </p>
 
-          <!-- Social & Contact Links -->
-          <div class="flex flex-wrap items-center gap-3 pt-2">
+          <!-- Social & Action Links (Including Download/View CV) -->
+          <div class="flex flex-wrap items-center gap-2.5 pt-2">
             <a href="https://scholar.google.com.hk/citations?user=fKrkHpMAAAAJ&hl" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-medium rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-200 hover:border-emerald-500 hover:text-emerald-600 transition-all shadow-sm">
               <i class="fa-brands fa-google-scholar text-blue-500"></i> Google Scholar
             </a>
@@ -167,7 +167,6 @@
                   <span class="text-slate-400"><i class="fa-solid fa-medal w-4"></i> Distinction:</span>
                   <span class="font-medium text-slate-800 dark:text-slate-200">National Scholarship</span>
                 </div>
-
               </div>
 
               <!-- Contact Action -->
@@ -628,11 +627,15 @@
 
   </main>
 
-  <!-- Footer (Academic References removed) -->
+  <!-- Footer with Click-to-Copy Link -->
   <footer class="mt-20 border-t border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-950/50 py-10 no-print">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
-      <div>
-        © 2026 Kairong Sun (孙凯荣). Hosted on GitHub Pages.
+      <div class="flex items-center gap-1.5 flex-wrap">
+        <span>© 2026 Kairong Sun ·</span>
+        <button onclick="copySiteUrl()" title="Click to copy link: https://kairong-sun.github.io" class="hover:text-emerald-600 dark:hover:text-emerald-400 font-mono transition-colors inline-flex items-center gap-1 group cursor-pointer">
+          <span>kairong-sun.github.io</span>
+          <i class="fa-regular fa-copy text-[11px] opacity-60 group-hover:opacity-100 text-slate-400 group-hover:text-emerald-500 transition-opacity"></i>
+        </button>
       </div>
       <div>
         <a href="#hero" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Back to top ↑</a>
@@ -640,10 +643,10 @@
     </div>
   </footer>
 
-  <!-- Toast Notification for Email Copy -->
+  <!-- Toast Notification for Copy Actions -->
   <div id="toast" class="fixed bottom-6 right-6 px-4 py-2.5 rounded-xl bg-slate-900 text-white text-xs font-medium shadow-2xl transition-all duration-300 opacity-0 translate-y-4 pointer-events-none z-50 flex items-center gap-2">
     <i class="fa-solid fa-circle-check text-emerald-400"></i>
-    <span>Email copied to clipboard!</span>
+    <span id="toast-msg">Copied to clipboard!</span>
   </div>
 
   <!-- Theme Toggle & Utilities Script -->
@@ -677,17 +680,32 @@
       }
     });
 
-    // Copy Email to Clipboard
+    // Toast Utility
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toast-msg');
+      if (toastMsg) toastMsg.innerText = msg;
+      toast.classList.remove('opacity-0', 'translate-y-4');
+      toast.classList.add('opacity-100', 'translate-y-0');
+      setTimeout(() => {
+        toast.classList.remove('opacity-100', 'translate-y-0');
+        toast.classList.add('opacity-0', 'translate-y-4');
+      }, 2200);
+    }
+
+    // Copy Email
     function copyEmail() {
       const email = 'skr@cau.edu.cn';
       navigator.clipboard.writeText(email).then(() => {
-        const toast = document.getElementById('toast');
-        toast.classList.remove('opacity-0', 'translate-y-4');
-        toast.classList.add('opacity-100', 'translate-y-0');
-        setTimeout(() => {
-          toast.classList.remove('opacity-100', 'translate-y-0');
-          toast.classList.add('opacity-0', 'translate-y-4');
-        }, 2200);
+        showToast('Email copied to clipboard: ' + email);
+      });
+    }
+
+    // Copy Website URL
+    function copySiteUrl() {
+      const url = 'https://kairong-sun.github.io';
+      navigator.clipboard.writeText(url).then(() => {
+        showToast('Website link copied: ' + url);
       });
     }
   </script>
